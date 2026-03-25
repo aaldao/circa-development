@@ -34,15 +34,14 @@
 
     /* Desktop only cursor */
     @media (pointer: fine) {
-      body { cursor: none; }
+      body, a, button, * { cursor: none !important; }
       .cursor {
         width: 8px; height: 8px;
         background: var(--accent);
         border-radius: 50%;
         position: fixed; top: 0; left: 0;
         pointer-events: none;
-        z-index: 9999;
-        mix-blend-mode: multiply;
+        z-index: 2147483647;
         display: block;
       }
       .cursor-ring {
@@ -51,8 +50,8 @@
         border-radius: 50%;
         position: fixed; top: 0; left: 0;
         pointer-events: none;
-        z-index: 9998;
-        opacity: 0.5;
+        z-index: 2147483646;
+        opacity: 0.6;
         display: block;
       }
     }
@@ -122,16 +121,15 @@
 
     /* ── Hero ── */
     #hero {
-      min-height: 100svh;
       display: flex; flex-direction: column; justify-content: flex-end;
-      padding-top: 100px;
+      padding-top: 88px;
       padding-bottom: 64px;
       border-bottom: 1px solid var(--rule);
       position: relative;
       overflow: hidden;
     }
     @media (min-width: 640px) {
-      #hero { padding-bottom: 96px; }
+      #hero { min-height: 100svh; padding-top: 120px; padding-bottom: 96px; }
     }
 
     .hero-eyebrow {
@@ -535,7 +533,8 @@
             <span class="stack-tag">React Native</span>
             <span class="stack-tag">Expo</span>
             <span class="stack-tag">TypeScript</span>
-            <span class="stack-tag">Local-first</span>
+            <span class="stack-tag">AI / LLM</span>
+            <span class="stack-tag">iOS & Android</span>
           </div>
         </div>
       </div>
@@ -600,8 +599,8 @@
         'work.label': 'Selected work',
         'jornalia.tag': 'Mobile App · Time Tracking',
         'jornalia.desc': 'A personal time-tracking app for logging work hours, reviewing history, and keeping tabs on productivity — built entirely in React Native for iOS and Android.',
-        'cuspide.tag': 'Mobile App · Productivity',
-        'cuspide.desc': 'A focused productivity tool designed to help users stay at the top of their day — built with a clean architecture and an emphasis on performance and offline reliability.',
+        'cuspide.tag': 'Mobile App · Astrology & AI',
+        'cuspide.desc': 'An AI-powered horoscope app with daily readings and fortune cookies — available on iOS and Android. Combines astrology with generative AI to deliver a personal, engaging experience every day.',
         'about.label': 'About',
         'about.title': 'Built on<br /><em>craft</em> &<br />precision.',
         'about.p1': 'Circa Development is an independent software studio built around a simple idea: good software should work for everyone — the company that commissions it, the employees who depend on it daily, and the customers it ultimately serves.',
@@ -636,8 +635,8 @@
         'work.label': 'Proyectos',
         'jornalia.tag': 'App Móvil · Control de Horas',
         'jornalia.desc': 'App personal para registrar horas de trabajo, revisar el historial y seguir la productividad — desarrollada en React Native para iOS y Android.',
-        'cuspide.tag': 'App Móvil · Productividad',
-        'cuspide.desc': 'Herramienta de productividad diseñada para que los usuarios estén siempre en su mejor nivel — con arquitectura limpia y foco en rendimiento y funcionamiento offline.',
+        'cuspide.tag': 'App Móvil · Astrología & IA',
+        'cuspide.desc': 'App de horóscopo con IA y galletas de la fortuna — disponible en iOS y Android. Combina astrología con inteligencia artificial generativa para entregar una experiencia personal y única cada día.',
         'about.label': 'Nosotros',
         'about.title': 'Construido sobre<br /><em>craft</em> y<br />precisión.',
         'about.p1': 'Circa Development es un estudio de software independiente construido sobre una idea simple: el buen software tiene que funcionar para todos — la empresa que lo encarga, los empleados que dependen de él cada día, y los clientes a quienes finalmente sirve.',
